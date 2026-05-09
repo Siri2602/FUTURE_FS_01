@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siri Surya — Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- ===== PARTICLES CANVAS ===== -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-logo">&lt;Siri /&gt;</a>
+        <div class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#terminal" class="nav-link">Terminal</a>
+            <a href="#ai-chat" class="nav-link">AI Chat</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon" id="themeIcon">🌙</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION: HOME ===== -->
+    <section id="home" class="section hero-section">
+        <div class="hero-content">
+            <p class="hero-greeting">👋 Hello, I'm</p>
+            <h1 class="hero-name">MASINA SIRI SURYA</h1>
+            <div class="hero-typing">
+                <span class="typing-static">I'm a </span>
+                <span class="typing-dynamic" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-desc">
+                2nd Year B.Tech IT student at SRKR Engineering College, Bhimavaram.
+                Passionate about building beautiful, functional web experiences.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary glow-btn">View Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/Siri2602" target="_blank" class="social-link" title="GitHub">
+                    <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/siri-surya-566023366" target="_blank" class="social-link" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="mailto:sirisurya2007@gmail.com" class="social-link" title="Email">
+                    <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: ABOUT ===== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="about-card">
+                        <span class="about-card-icon">🎓</span>
+                        <h3>Education</h3>
+                        <p>2nd Year B.Tech IT<br/>SRKR Engineering College</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-icon">🎯</span>
+                        <h3>Goal</h3>
+                        <p>Become a Full Stack Developer &amp; build impactful products</p>
+                    </div>
+                    <div class="about-card">
+                        <span class="about-card-icon">🚀</span>
+                        <h3>Learning</h3>
+                        <p>React, Node.js, APIs, Cloud &amp; Advanced DSA</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>
+                        Hi! I'm <strong>Masina Siri Surya</strong>, a passionate developer currently pursuing
+                        B.Tech in Information Technology at SRKR Engineering College, Bhimavaram (2024–2028).
+                    </p>
+                    <p>
+                        I scored <strong>95%</strong> in SSC and <strong>95.2%</strong> in Intermediate,
+                        and I've been coding since I started college. I love turning ideas into real,
+                        working applications — from calculators to weather apps to AI-powered tools.
+                    </p>
+                    <p>
+                        My career aim is to become a skilled Full Stack Developer, contribute to open source,
+                        and eventually build products that solve real-world problems. When I'm not coding,
+                        I'm exploring new technologies, solving DSA problems, or mentoring fellow students.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item"><span class="detail-label">Name:</span><span>MASINA SIRI SURYA</span></div>
+                        <div class="detail-item"><span class="detail-label">DOB:</span><span>26/08/2007</span></div>
+                        <div class="detail-item"><span class="detail-label">Email:</span><span>sirisurya2007@gmail.com</span></div>
+                        <div class="detail-item"><span class="detail-label">Phone:</span><span>+91 8121163943</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: SKILLS ===== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Know</span>
+                <h2 class="section-title">Skills &amp; Technologies</h2>
+            </div>
+            <div class="skills-subsection">
+                <h3 class="skills-sub-title">💻 Technical Skills</h3>
+                <div class="skills-bars-grid">
+                    <div class="skill-bar-item" data-level="90"><div class="skill-bar-header"><span>C</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-bar-fill"></div></div></div>
+                    <div class="skill-bar-item" data-level="92"><div class="skill-bar-header"><span>JavaScript</span><span class="skill-percent">92%</span></div><div class="skill-bar"><div class="skill-bar-fill"></div></div></div>
+                    <div class="skill-bar-item" data-level="88"><div class="skill-bar-header"><span>Python</span><span class="skill-percent">88%</span></div><div class="skill-bar"><div class="skill-bar-fill"></div></div></div>
+                    <div class="skill-bar-item" data-level="85"><div class="skill-bar-header"><span>Java</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-bar-fill"></div></div></div>
+                    <div class="skill-bar-item" data-level="80"><div class="skill-bar-header"><span>SQL</span><span class="skill-percent">80%</span></div><div class="skill-bar"><div class="skill-bar-fill"></div></div></div>
+                    <div class="skill-bar-item" data-level="87"><div class="skill-bar-header"><span>DSA</span><span class="skill-percent">87%</span></div><div class="skill-bar"><div class="skill-bar-fill"></div></div></div>
+                </div>
+            </div>
+            <div class="skills-subsection">
+                <h3 class="skills-sub-title">🛠️ Frameworks &amp; Tools</h3>
+                <div class="skills-cards-grid">
+                    <div class="skill-card"><div class="skill-card-icon">⚛️</div><span>React.js</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🌐</div><span>HTML5</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🎨</div><span>CSS3</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🅱️</div><span>Bootstrap</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🟢</div><span>Node.js</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🚂</div><span>Express.js</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🐍</div><span>Django</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🔗</div><span>REST APIs</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🍃</div><span>MongoDB</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🐬</div><span>MySQL</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">🐙</div><span>Git / GitHub</span></div>
+                    <div class="skill-card"><div class="skill-card-icon">☁️</div><span>AWS</span></div>
+                </div>
+            </div>
+            <div class="skills-subsection">
+                <h3 class="skills-sub-title">🤝 Professional Skills</h3>
+                <div class="soft-skills-grid">
+                    <div class="soft-skill"><svg class="ring-svg" viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fill" cx="50" cy="50" r="42" data-pct="95"/></svg><span class="ring-label">Problem Solving</span></div>
+                    <div class="soft-skill"><svg class="ring-svg" viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fill" cx="50" cy="50" r="42" data-pct="90"/></svg><span class="ring-label">Team Work</span></div>
+                    <div class="soft-skill"><svg class="ring-svg" viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fill" cx="50" cy="50" r="42" data-pct="88"/></svg><span class="ring-label">Communication</span></div>
+                    <div class="soft-skill"><svg class="ring-svg" viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fill" cx="50" cy="50" r="42" data-pct="92"/></svg><span class="ring-label">Adaptability</span></div>
+                    <div class="soft-skill"><svg class="ring-svg" viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fill" cx="50" cy="50" r="42" data-pct="85"/></svg><span class="ring-label">Mentorship</span></div>
+                    <div class="soft-skill"><svg class="ring-svg" viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle class="ring-fill" cx="50" cy="50" r="42" data-pct="90"/></svg><span class="ring-label">Time Mgmt</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: PROJECTS ===== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Work</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="--hue:150;"><span>📝</span><p>To-Do App</p></div>
+                        <div class="project-overlay">
+                            <a href="https://siri2602.github.io/pro-todo-app/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/Siri2602/pro-todo-app" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-info"><h3>To-Do App</h3><p>Task management with priority system, search &amp; filter, progress tracking, and local storage.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="--hue:220;"><span>🧮</span><p>Calculator</p></div>
+                        <div class="project-overlay">
+                            <a href="https://siri2602.github.io/calculator-app/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/Siri2602/calculator-app" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-info"><h3>Calculator App</h3><p>Stylish calculator with dark mode, keyboard support, sound effects, and animated buttons.</p><div class="project-tags"><span>HTML</span><span>CSS Grid</span><span>JavaScript</span></div></div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="--hue:30;"><span>🌦️</span><p>Weather App</p></div>
+                        <div class="project-overlay">
+                            <a href="https://siri2602.github.io/weather-app/" target="_blank" class="btn btn-sm btn-primary">Live Demo</a>
+                            <a href="https://github.com/Siri2602/weather-app" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-info"><h3>Weather App</h3><p>Live weather data using OpenWeather API with dynamic backgrounds, icons, and error handling.</p><div class="project-tags"><span>API</span><span>Async JS</span><span>JSON</span></div></div>
+                </div>
+                <div class="project-card reveal">
+                    <div class="project-img">
+                        <div class="project-placeholder" style="--hue:280;"><span>💼</span><p>Portfolio</p></div>
+                        <div class="project-overlay">
+                            <a href="#home" class="btn btn-sm btn-primary">View</a>
+                            <a href="https://github.com/Siri2602" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-info"><h3>Portfolio Website</h3><p>Interactive portfolio with terminal, AI chat, animations, dark mode, and modern responsive UI.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: TERMINAL ===== -->
+    <section id="terminal" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Interactive</span>
+                <h2 class="section-title">Developer Terminal</h2>
+                <p class="section-desc">Type <code>help</code> to see available commands</p>
+            </div>
+            <div class="terminal-window">
+                <div class="terminal-top-bar">
+                    <span class="t-dot" style="background:#ff5f57"></span>
+                    <span class="t-dot" style="background:#febc2e"></span>
+                    <span class="t-dot" style="background:#28c840"></span>
+                    <span class="t-title">siri@portfolio:~</span>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="term-line"><span class="term-text">Welcome to Siri's Terminal Portfolio! Type <span class="term-cmd">help</span> to begin.</span></div>
+                </div>
+                <div class="terminal-input-area">
+                    <span class="term-prompt">visitor@siri:~$</span>
+                    <input type="text" id="terminalInput" class="term-input" autocomplete="off" spellcheck="false" placeholder="Type a command..." />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: AI CHAT ===== -->
+    <section id="ai-chat" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Smart Assistant</span>
+                <h2 class="section-title">Ask Siri AI 🤖</h2>
+                <p class="section-desc">Ask me anything about Siri's skills, projects, or experience!</p>
+            </div>
+            <div class="chat-window">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-msg bot">
+                        <div class="chat-avatar">🤖</div>
+                        <div class="chat-bubble">Hi! I'm Siri AI Assistant. Ask me about Siri's projects, skills, education, or anything else!<br/><em>"What projects did Siri build?"</em><br/><em>"What technologies does Siri know?"</em></div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Ask Siri AI..." autocomplete="off" />
+                    <button class="chat-send-btn" id="chatSendBtn">
+                        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    </button>
+                </div>
+                <div class="chat-suggestions">
+                    <button class="suggestion-chip" data-q="What projects did Siri build?">Projects?</button>
+                    <button class="suggestion-chip" data-q="What technologies does Siri know?">Technologies?</button>
+                    <button class="suggestion-chip" data-q="Tell me about Siri's education">Education?</button>
+                    <button class="suggestion-chip" data-q="How can I contact Siri?">Contact?</button>
+                    <button class="suggestion-chip" data-q="What are Siri's goals?">Goals?</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION: CONTACT ===== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-info-cards">
+                    <div class="contact-info-card"><span class="ci-icon">📧</span><h4>Email</h4><a href="mailto:sirisurya2007@gmail.com">sirisurya2007@gmail.com</a></div>
+                    <div class="contact-info-card"><span class="ci-icon">📱</span><h4>Phone</h4><a href="tel:+918121163943">+91 8121163943</a></div>
+                    <div class="contact-info-card"><span class="ci-icon">💼</span><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/siri-surya-566023366" target="_blank">linkedin.com/in/siri-surya</a></div>
+                    <div class="contact-info-card"><span class="ci-icon">🐙</span><h4>GitHub</h4><a href="https://github.com/Siri2602" target="_blank">github.com/Siri2602</a></div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group"><input type="text" id="formName" placeholder="Your Name" required /></div>
+                    <div class="form-group"><input type="email" id="formEmail" placeholder="Your Email" required /></div>
+                    <div class="form-group"><textarea id="formMessage" rows="5" placeholder="Your Message..." required></textarea></div>
+                    <button type="submit" class="btn btn-primary glow-btn full-width">Send Message 🚀</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">&lt;Siri /&gt;</a>
+                <div class="footer-links">
+                    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/Siri2602" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/siri-surya-566023366" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2025 Masina Siri Surya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
